@@ -11,6 +11,7 @@ export const colors = {
 };
 
 const styles = StyleSheet.create({
+  // MAIN APPLICATION ***** MAIN APPLICATION ***** MAIN APPLICATION *****
   container: {
     flex: 1,
     backgroundColor: colors.background,
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     marginTop: 16,
   },
+  // LISTING ***** LISTING ***** LISTING *****
   listingWrapper: {
     paddingHorizontal: 16,
     marginTop: 24,
@@ -68,7 +70,64 @@ const styles = StyleSheet.create({
   price: {
     fontWeight: "bold",
   },
-  performance: {},
+  performance: {
+    backgroundColor: colors.background,
+  },
+  // MODAL WINDOW ***** MODAL WINDOW ***** MODAL WINDOW *****
+  modalContainer: {
+    flex: 1,
+    padding: 24,
+    backgroundColor: "grey",
+  },
+  modalContentContainer: {
+    flex: 1,
+    minHeight: 400,
+  },
+  bottomSheet: {
+    shadowColor: "000",
+    shadowOffset: {
+      width: 0,
+      height: -4,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  // MODAL CHART AND INFORMATION ***** MODAL CHART AND INFORMATION *****
+  chartWrapper: {
+    margin: 16,
+  },
+  titlesWrapper: {
+    padding: 1,
+  },
+  upperTitle: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  upperLeftTitle: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  subtitle: {
+    fontSize: 14,
+    color: colors.ticker,
+    paddingLeft: 5,
+  },
+  lowerTitle: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 4,
+  },
+  boldTitle: {
+    fontSize: 24,
+    fontWeight: "700",
+  },
+  chartImage: {
+    width: 36,
+    height: 36,
+  },
 });
 
 export default styles;

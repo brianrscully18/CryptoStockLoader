@@ -2,12 +2,13 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import styles, { colors } from "../constants/Styles";
 
-interface ListItemProps {
+export interface ListItemProps {
   name: string;
   ticker: string;
   price: number;
   performance: number;
   logoURL: string;
+  onPress: () => void;
 }
 
 const ListItem: React.FC<ListItemProps> = ({
@@ -16,11 +17,12 @@ const ListItem: React.FC<ListItemProps> = ({
   price,
   performance,
   logoURL,
+  onPress,
 }) => {
-  const performancePositive =
+  const performanceColor =
     performance > 0 ? colors.performancePositive : colors.performanceNegative;
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onPress}>
       <View style={styles.listingWrapper}>
         {/* Left Hand Side */}
         <View style={styles.leftWrapper}>
@@ -41,7 +43,7 @@ const ListItem: React.FC<ListItemProps> = ({
           <Text style={styles.price}>
             ${price.toLocaleString("en-US", { currency: "USD" })}
           </Text>
-          <Text style={[styles.performance, { color: performancePositive }]}>
+          <Text style={[styles.performance, { color: performanceColor }]}>
             {performance.toFixed(2)}%
           </Text>
         </View>
