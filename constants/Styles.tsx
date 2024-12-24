@@ -95,10 +95,11 @@ const styles = StyleSheet.create({
   },
   // MODAL CHART AND INFORMATION ***** MODAL CHART AND INFORMATION *****
   chartWrapper: {
-    margin: 16,
+    marginVertical: 16,
   },
   titlesWrapper: {
     padding: 1,
+    marginHorizontal: 16,
   },
   upperTitle: {
     flexDirection: "row",
@@ -127,6 +128,9 @@ const styles = StyleSheet.create({
   chartImage: {
     width: 36,
     height: 36,
+  },
+  chartLineWrapper: {
+    marginTop: 10,
   },
 });
 

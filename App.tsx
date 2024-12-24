@@ -18,6 +18,16 @@ import {
   BottomSheetModalProvider,
 } from "@gorhom/bottom-sheet";
 
+import {
+  configureReanimatedLogger,
+  ReanimatedLogLevel,
+} from "react-native-reanimated";
+
+configureReanimatedLogger({
+  level: ReanimatedLogLevel.warn,
+  strict: false,
+});
+
 export default function App() {
   const [selectedCoinData, setSelectedCoinData] =
     useState<ListItemProps | null>(null);
